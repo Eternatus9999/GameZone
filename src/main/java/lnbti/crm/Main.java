@@ -1,4 +1,4 @@
-package edu.icet.crm;
+package lnbti.crm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
