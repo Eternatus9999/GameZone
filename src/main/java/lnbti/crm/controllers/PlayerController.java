@@ -15,4 +15,8 @@ public class PlayerController {
     public void addPlayer(@RequestBody Player player){
         System.out.print(player);
     }
+    @DeleteMapping("/player-delete/{id}")
+    public void deletePlayer(@PathVariable long id){
+        System.out.print(id);
+    }
 }
