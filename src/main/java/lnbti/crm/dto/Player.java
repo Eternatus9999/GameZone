@@ -11,6 +11,14 @@ import lombok.ToString;
 @ToString
 public class Player {
 
+    public Player(String name, int age, String email, String password, String gender){
+        this.name = name;
+        this.age= age;
+        this.email=email;
+        this.password = password;
+        this.gender = gender;
+    }
+
     private long id;
     private String name;
     private int age;

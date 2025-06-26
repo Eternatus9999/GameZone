@@ -21,11 +21,12 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public Player getPlayerById(long id) {
-        return new Player(1,"Chathusha",20,"eternatus9999@gmail.com","12345","Male");
+        return objectmapper.convertValue(playerrepository.findById(id),Player.class);
     }
 
     @Override
     public String updatePlayer(Player player) {
+        playerrepository.save(objectmapper.convertValue(player,PlayerEntity.class));
         return "Updated Successfully!";
     }
 
@@ -37,6 +38,7 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public String deletePlayer(long id) {
+        playerrepository.delete(objectmapper.convertValue(playerrepository.findById(id),PlayerEntity.class));
         return "Deleted Successfully!";
     }
 
